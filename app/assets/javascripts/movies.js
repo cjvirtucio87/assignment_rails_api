@@ -8,13 +8,11 @@ var MoviesView = (function (AJAX) {
   var init = function() {
     _$movieTable = $('[data-movies-table]');
     _$reviewsTable = $('[data-reviews-table]');
-    console.log('This script file is being run');
     _cacheDOM();
     _handleAjaxForm();
   };
 
   var _cacheDOM = function() {
-
     AJAX.movies.getData("/movies.json", _fillMoviesTable);
     AJAX.movies.getData("/reviews.json", _fillReviewsTable);
   };
@@ -49,7 +47,6 @@ var MoviesView = (function (AJAX) {
 
   var _handleAjaxForm = function () {
     _$newMovieForm = $('form[data-ajaxremote]');
-    console.log(_$newMovieForm);
     _$newMovieForm.submit(listeners.onMoviesFormSubmit);
   };
 

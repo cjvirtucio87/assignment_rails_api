@@ -1,7 +1,6 @@
 var reviewPartial = ("<%= escape_javascript(render :partial => 'review', locals: { :review => @review }) %>");
 $reviewPartial = $(reviewPartial);
 
-console.log("This script is running");
 $("[data-reviews-table] tr").first().after($reviewPartial);
 $reviewPartial.hide().fadeIn(2000);
 

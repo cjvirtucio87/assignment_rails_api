@@ -5,10 +5,10 @@ class ReviewsController < ApplicationController
     @movies = Movie.all
     formatted_reviews = @reviews.map do |review|
       {title: review.title,
-        movie: review.movie.title,
-        reviewer_name: review.reviewer_name,
-        review_text: review.review_text,
-        review_date: review.created_at
+       movie: review.movie.title,
+       reviewer_name: review.reviewer_name,
+       review_text: review.review_text,
+       review_date: review.created_at
       }
     end
     respond_to do |format|
