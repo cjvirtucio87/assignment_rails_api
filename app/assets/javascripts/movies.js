@@ -1,7 +1,7 @@
-var AJAX = {}
+var AJAX = {};
 
 var MoviesView = (function (AJAX) {
-  var _$movieTable; 
+  var _$movieTable;
   var _$reviewsTable;
   var _$newMovieForm;
 
@@ -98,7 +98,7 @@ AJAX.movies = (function() {
       success: function(data) {
         callback(data);
       }
-    })
+    });
   };
 
   return {

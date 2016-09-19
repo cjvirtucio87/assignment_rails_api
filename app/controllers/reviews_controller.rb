@@ -8,7 +8,7 @@ class ReviewsController < ApplicationController
         movie: review.movie.title,
         reviewer_name: review.reviewer_name,
         review_text: review.review_text,
-        review_date: review.review_date
+        review_date: review.created_at
       }
     end
     respond_to do |format|
